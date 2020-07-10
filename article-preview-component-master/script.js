@@ -7,6 +7,9 @@
 //   shareIcon.replaceChild(, svg);
 // }
 
-// const shareIcon = document.querySelector(".share");
+const shareIcon = document.querySelector(".share");
 
-// shareIcon.addEventListener("mouseDown", toggleSVG());
+shareIcon.addEventListener("click", () => {
+  document.getElementById("");
+  document.querySelector(".popup").classList.toggle("hide");
+});

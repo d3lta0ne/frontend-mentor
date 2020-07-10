@@ -109,11 +109,22 @@ body {
 
   fill: hsl(210, 46%, 95%);
 }
-.popup-container {
-  position: relative;
-  visibility: collapse;
+.popup {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  text-transform: uppercase;
+  min-width: 200px;
+  max-height: 100%;
   background-color: hsl(217, 19%, 35%);
-  visibility: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   color: hsl(214, 17%, 51%);
+  z-index: 1;
+}
+
+.hide {
+  display: none;
+  /* visibility: ; */
 }
