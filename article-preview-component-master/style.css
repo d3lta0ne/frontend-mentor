@@ -42,6 +42,8 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   flex: 5;
+  padding: 1rem;
+
   border: 1px dashed yellow;
 }
 
@@ -70,7 +72,6 @@ body {
 .author-info {
   display: flex;
   align-items: center;
-  justify-items: ;
   border: 1px dashed black;
 }
 
@@ -79,11 +80,12 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
-.author-info svg {
-  border: 4px dashed teal;
+.share {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
 }
 
 .popup-container {
