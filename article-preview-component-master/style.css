@@ -1,0 +1,96 @@
+@import url(https://fonts.google.com/specimen/Manrope);
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(212, 23%, 69%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(210, 46%, 95%);
+  font-family: Manrope;
+  font-size: 13px;
+  height: 100vh;
+  margin: 0;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px dashed blue;
+  margin: 5rem;
+  width: 640px;
+}
+
+.article-container > img {
+  width: 30%;
+  /* border: 1px dashed red; */
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 5;
+  border: 1px dashed yellow;
+}
+
+.article-text {
+  border: 1px dashed purple;
+}
+
+.article-text h1 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.article-text p {
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+}
+
+.article-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px dashed green;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  justify-items: ;
+  border: 1px dashed black;
+}
+
+.author-info > img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.author-info svg {
+  border: 4px dashed teal;
+}
+
+.popup-container {
+  position: relative;
+  visibility: hidden;
+  background-color: hsl(217, 19%, 35%);
+  visibility: hidden;
+  border-radius: 10px;
+  color: hsl(214, 17%, 51%);
+}
