@@ -28,16 +28,21 @@ body {
   display: flex;
   flex-direction: row;
   border: 1px dashed blue;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   margin: 5rem;
   width: 640px;
+  overflow: hidden;
 }
 
 .article-container > img {
-  width: 30%;
+  width: 40%;
+  object-fit: cover;
   /* border: 1px dashed red; */
 }
 
 .article-body {
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,6 +53,11 @@ body {
 }
 
 .article-text {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+  margin-right: 1rem;
   border: 1px dashed purple;
 }
 
@@ -85,12 +95,23 @@ body {
 
 .share {
   background-color: hsl(210, 46%, 95%);
+  border: 5px solid hsl(210, 46%, 95%);
   border-radius: 50%;
+
+  fill: hsl(217, 19%, 35%);
 }
 
+.share:hover,
+.share > svg > path:hover {
+  background-color: hsl(214, 17%, 51%);
+  border: 5px solid hsl(214, 17%, 51%);
+  border-radius: 50%;
+
+  fill: hsl(210, 46%, 95%);
+}
 .popup-container {
   position: relative;
-  visibility: hidden;
+  visibility: collapse;
   background-color: hsl(217, 19%, 35%);
   visibility: hidden;
   border-radius: 10px;
