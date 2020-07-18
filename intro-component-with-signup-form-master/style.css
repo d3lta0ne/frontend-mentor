@@ -18,42 +18,106 @@
 }
 
 body {
-  /* display: flex; */
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: var(--red);
+  border: 10px solid yellow;
 }
 
-.btn {
-  width: 305px;
-  height: 30px;
-  float: right;
-  /* justify-self: right; */
+.showcase {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* margin: 5rem; */
+  /* height: 100%; */
+  /* width: 100%; */
+  border: 10px solid purple;
 }
 
 header {
-  float: left;
-  padding: 40px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white; */
+  flex: 1;
+  line-height: 1.2;
+  color: white;
 }
 
 header > h1 {
-  width: 400px;
+  font-weight: 700;
+  width: 300px;
 }
 
-header > p {
-  width: 500px;
+header > h2 {
+  font-weight: 400;
+  /* width: 500px; */
+  line-height: 1.5;
 }
 
-.sign-up {
-  float: right;
+.sign-up__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 540px;
-  max-height: 475px;
+  flex: 1;
+  height: 600px;
+  margin: 10px;
+  /* margin: 10px; */
+  /* width: 100%; */
+  /* width: 50%; */
+  border: 10px solid black;
+}
+
+.sign-up__form {
+  background-color: white;
+  border-radius: 5px;
+  margin: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* height: 100%; */
+  width: 540px;
 }
 
 form input[type="text"] {
-  width: 460;
+  width: 90%;
+  margin: 10px;
+  border: 1px solid var(--grayish-blue);
+  color: orange;
+  /* height: 30%; */
+  border-radius: 5px;
+  height: 3rem;
+  padding: 20px;
+  /* margin: auto; */
+}
+
+.btn {
+  /* max-width: 305px;
+  height: 30px; */
+  color: white;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px;
+  /* justify-self: right; */
+}
+
+.btn-blue {
+  background-color: var(--blue);
+}
+
+.btn-green {
+  background-color: var(--green);
 }
 
 .attribution {

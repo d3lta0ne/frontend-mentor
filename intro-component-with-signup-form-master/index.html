@@ -15,31 +15,46 @@
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
-    <header>
-      <h1>Learn to code by watching others</h1>
-      <p>
-        See how experienced developers solve problems in real-time. Watching
-        scripted tutorials is great, but understanding how developers think is
-        invaluable.
-      </p>
-    </header>
+    <div class="showcase">
+      <header>
+        <h1>Learn to code by watching others</h1>
+        <h2>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </h2>
+      </header>
 
-    <button class="btn btn-blue">
-      Try it free 7 days then $20/mo. thereafter
-    </button>
+      <div class="sign-up__container">
+        <button class="btn btn-blue">
+          Try it free 7 days then $20/mo. thereafter
+        </button>
 
-    <form class="sign-up" action="" method="post">
-      <input type="text" id="fname" name="fname" placeholder="First Name" />
-      <input type="text" id="lname" name="lname" placeholder="Last Name" />
-      <input type="text" id="email" name="email" placeholder="Email Address" />
-      <input type="text" id="password" name="password" placeholder="Password" />
-      <button class="btn btn-green">Claim your free trial</button>
-      <small>
-        By clicking the button, you are agreeing to our
-        <a target="#" rel="noopener noreferrer">Terms and Services</a>
-      </small>
-    </form>
-
+        <form class="sign-up__form" action="" method="post">
+          <input type="text" id="fname" name="fname" placeholder="First Name" />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+          <button class="btn btn-green">Claim your free trial</button>
+          <p>
+            <small>
+              By clicking the button, you are agreeing to our
+              <a target="#" rel="noopener noreferrer">Terms and Services</a>
+            </small>
+          </p>
+        </form>
+      </div>
+    </div>
     <footer>
       <p class="attribution">
         Challenge by
