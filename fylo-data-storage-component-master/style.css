@@ -9,19 +9,22 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  border: 3px solid red;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-column-gap: 30px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  padding-left: 250px;
   background-color: #0c122c;
   background-image: url("images/bg-desktop.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  display: grid;
-  grid-template-areas: "header main" "footer footer";
   font-size: 14px;
   font-family: Raleway;
 }
 body header {
-  grid-area: header;
-  align-self: center;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -48,7 +51,6 @@ body header .icons-container {
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   grid-gap: 15px;
   align-items: center;
-  border: 1px solid yellow;
   margin-top: 15px;
 }
 body header .icon-container {
@@ -60,7 +62,6 @@ body header .icon-container {
   background-color: #0c122c;
   width: 50px;
   height: 50px;
-  border: 1px solid purple;
 }
 body header .icon {
   position: relative;
@@ -71,26 +72,27 @@ body header .icon {
   transform: translateY(-50%);
   width: 25px;
   height: 25px;
-  border: 1px solid red;
 }
 body main {
-  grid-area: main;
+  width: 540px;
   position: relative;
   margin: auto;
   top: 50%;
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  margin-left: 0;
 }
 body main .storage-container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-evenly;
-  width: 540px;
+  width: inherit;
   height: 150px;
   padding: 35px;
-  color: white;
+  color: #dddbff;
+  font-weight: 400;
   background-color: #1d2c67;
   -webkit-border-radius: 7.5px;
   -moz-border-radius: 7.5px;
@@ -98,15 +100,18 @@ body main .storage-container {
   -o-border-radius: 7.5px;
   border-radius: 7.5px;
 }
-body main .storage-popup {
+body main .storage-container strong {
+  font-weight: 700;
+}
+body main .storage-container .storage-popup {
   display: none;
 }
-body main .storage-graphic {
+body main .storage-container .storage-graphic {
   padding-top: 20px;
   width: 100%;
   height: auto;
 }
-body main .storage-graphic #graph-background {
+body main .storage-container .storage-graphic #graph-background {
   -webkit-border-radius: 7.5px;
   -moz-border-radius: 7.5px;
   -ms-border-radius: 7.5px;
@@ -115,7 +120,7 @@ body main .storage-graphic #graph-background {
   background: #0c122c;
   height: 15px;
 }
-body main .storage-graphic #graph-background #graph-fill {
+body main .storage-container .storage-graphic #graph-background #graph-fill {
   -webkit-border-radius: 7.5px;
   -moz-border-radius: 7.5px;
   -ms-border-radius: 7.5px;
@@ -127,7 +132,7 @@ body main .storage-graphic #graph-background #graph-fill {
   overflow: hidden;
   border: 2px solid #0c122c;
 }
-body main .storage-graphic #graph-background #graph-fill #graph-endpoint {
+body main .storage-container .storage-graphic #graph-background #graph-fill #graph-endpoint {
   position: relative;
   margin: auto;
   top: 50%;
@@ -146,20 +151,22 @@ body main .storage-graphic #graph-background #graph-fill #graph-endpoint {
   width: 10px;
   background-color: white;
 }
-body main .storage-graphic .graphic-text {
+body main .storage-container .storage-graphic .graphic-text {
   height: auto;
   width: 100%;
   padding-top: 10px;
   content: "";
 }
-body main .storage-graphic .graphic-text .left {
+body main .storage-container .storage-graphic .graphic-text .left {
   float: left;
 }
-body main .storage-graphic .graphic-text .right {
+body main .storage-container .storage-graphic .graphic-text .right {
   float: right;
 }
 body footer {
-  grid-area: footer;
+  color: white;
+  padding-top: 10px;
+  display: inline-block;
   position: relative;
   margin: auto;
   top: 50%;
@@ -172,7 +179,35 @@ body footer .attribution {
   text-align: center;
 }
 body footer .attribution a {
-  color: #3e52a3;
+  text-decoration: none;
+  color: #dddbff;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-row: repeat(3, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  body header {
+    width: 350px;
+  }
+  body main {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 350px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

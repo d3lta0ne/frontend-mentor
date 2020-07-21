@@ -48,25 +48,28 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  border: 3px solid red;
+
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-column-gap: 30px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+
+  padding-left: 250px;
 
   background-color: blue("very-dark");
   background-image: url("images/bg-desktop.png");
   background-position: bottom;
   background-repeat: no-repeat;
-
-  display: grid;
-  grid-template-areas: "header main" "footer footer";
-  //   align-items: center;
-  //   grid-template-columns: 1fr 1fr;
+  //   background-attachment: local;
 
   font-size: $font-size;
   font-family: Raleway;
 
   // Header
   header {
-    grid-area: header;
-    align-self: center;
     @include css(border-radius, 5px);
     @include css(border-top-right-radius, 80px);
     @include center;
@@ -74,7 +77,6 @@ body {
     width: 350px;
     height: 200px;
     padding: 40px;
-
     // Icons
     $icons: "document", "folder", "upload";
 
@@ -83,7 +85,6 @@ body {
       grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
       grid-gap: 15px;
       align-items: center;
-      border: 1px solid yellow;
 
       margin-top: 15px;
     }
@@ -94,16 +95,12 @@ body {
       background-color: blue("very-dark");
       width: 50px;
       height: 50px;
-
-      border: 1px solid purple;
     }
 
     .icon {
       @include center;
       width: 25px;
       height: 25px;
-
-      border: 1px solid red;
     }
   }
 
@@ -111,8 +108,9 @@ body {
   $percentage: 85%;
 
   main {
-    grid-area: main;
+    width: 540px;
     @include center();
+    margin-left: 0;
     // background-color: blue("dark");
 
     // Storage Graphic
@@ -121,79 +119,113 @@ body {
       flex-direction: column;
       align-items: stretch;
       justify-content: space-evenly;
-      width: 540px;
+      width: inherit;
       height: 150px;
       padding: 35px;
-      color: white;
-
+      color: blue("pale");
+      font-weight: 400;
       background-color: blue("dark");
 
       @include css(border-radius, 7.5px);
-    }
 
-    .storage-popup {
-      display: none;
-    }
-
-    .storage-graphic {
-      padding-top: 20px;
-      width: 100%;
-      height: auto;
-
-      #graph-background {
-        @include css(border-radius, 7.5px);
-        background: blue("very-dark");
-        height: 15px;
-
-        #graph-fill {
-          @include css(border-radius, 7.5px);
-
-          width: $percentage;
-          height: 100%;
-          background: $gradient;
-          overflow: hidden;
-          border: 2px solid blue("very-dark");
-
-          #graph-endpoint {
-            @include center();
-            @include css(border-radius, 50%);
-
-            margin: unset;
-            margin-right: 2px;
-            float: right;
-            height: 80%;
-            width: 10px;
-            background-color: white;
-          }
-        }
+      strong {
+        font-weight: 700;
       }
 
-      .graphic-text {
-        height: auto;
+      small {
+        color: blue("greyish");
+      }
+      .storage-popup {
+        display: none;
+      }
+
+      .storage-graphic {
+        padding-top: 20px;
         width: 100%;
-        padding-top: 10px;
-        content: "";
-        .left {
-          float: left;
+        height: auto;
+
+        #graph-background {
+          @include css(border-radius, 7.5px);
+          background: blue("very-dark");
+          height: 15px;
+
+          #graph-fill {
+            @include css(border-radius, 7.5px);
+
+            width: $percentage;
+            height: 100%;
+            background: $gradient;
+            overflow: hidden;
+            border: 2px solid blue("very-dark");
+
+            #graph-endpoint {
+              @include center();
+              @include css(border-radius, 50%);
+
+              margin: unset;
+              margin-right: 2px;
+              float: right;
+              height: 80%;
+              width: 10px;
+              background-color: white;
+            }
+          }
         }
 
-        .right {
-          float: right;
+        .graphic-text {
+          height: auto;
+          width: 100%;
+          padding-top: 10px;
+          content: "";
+          .left {
+            float: left;
+          }
+
+          .right {
+            float: right;
+          }
         }
       }
     }
   }
-
   // Footer and Attributation
   footer {
-    grid-area: footer;
+    color: white;
+    padding-top: 10px;
+    display: inline-block;
     @include center();
     .attribution {
       font-size: 11px;
       text-align: center;
     }
     .attribution a {
-      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+      color: blue("pale");
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+    // background-repeat: no-repeat;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-row: repeat(3, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+
+    header {
+      width: 350px;
+    }
+
+    main {
+      @include center();
+      width: 350px;
     }
   }
 }
