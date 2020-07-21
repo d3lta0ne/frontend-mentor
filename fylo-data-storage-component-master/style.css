@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  border: 3px solid red;
+  background-color: #0c122c;
+  background-image: url("images/bg-desktop.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas: "header main" "footer footer";
+  font-size: 14px;
+  font-family: Raleway;
+}
+body header {
+  grid-area: header;
+  align-self: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-border-top-right-radius: 80px;
+  -moz-border-top-right-radius: 80px;
+  -ms-border-top-right-radius: 80px;
+  -o-border-top-right-radius: 80px;
+  border-top-right-radius: 80px;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #1d2c67;
+  width: 350px;
+  height: 200px;
+  padding: 40px;
+}
+body header .icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: 15px;
+  align-items: center;
+  border: 1px solid yellow;
+  margin-top: 15px;
+}
+body header .icon-container {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #0c122c;
+  width: 50px;
+  height: 50px;
+  border: 1px solid purple;
+}
+body header .icon {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border: 1px solid red;
+}
+body main {
+  grid-area: main;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+body main .storage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 540px;
+  height: 150px;
+  padding: 35px;
+  color: white;
+  background-color: #1d2c67;
+  -webkit-border-radius: 7.5px;
+  -moz-border-radius: 7.5px;
+  -ms-border-radius: 7.5px;
+  -o-border-radius: 7.5px;
+  border-radius: 7.5px;
+}
+body main .storage-popup {
+  display: none;
+}
+body main .storage-graphic {
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+}
+body main .storage-graphic #graph-background {
+  -webkit-border-radius: 7.5px;
+  -moz-border-radius: 7.5px;
+  -ms-border-radius: 7.5px;
+  -o-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background: #0c122c;
+  height: 15px;
+}
+body main .storage-graphic #graph-background #graph-fill {
+  -webkit-border-radius: 7.5px;
+  -moz-border-radius: 7.5px;
+  -ms-border-radius: 7.5px;
+  -o-border-radius: 7.5px;
+  border-radius: 7.5px;
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffa399, #ff4d97);
+  overflow: hidden;
+  border: 2px solid #0c122c;
+}
+body main .storage-graphic #graph-background #graph-fill #graph-endpoint {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: unset;
+  margin-right: 2px;
+  float: right;
+  height: 80%;
+  width: 10px;
+  background-color: white;
+}
+body main .storage-graphic .graphic-text {
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+  content: "";
+}
+body main .storage-graphic .graphic-text .left {
+  float: left;
+}
+body main .storage-graphic .graphic-text .right {
+  float: right;
+}
+body footer {
+  grid-area: footer;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+body footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body footer .attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */

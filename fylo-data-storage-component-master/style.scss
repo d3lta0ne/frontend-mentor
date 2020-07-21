@@ -1,20 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
-@mixin css3-prefix($prop, $value) {
-    -webkit-#{$prop}: #{$value};
-    -moz-#{$prop}: #{$value};
-    -ms-#{$prop}: #{$value};
-    -o-#{$prop}: #{$value};
-    #{$prop}: #{$value};
- }
+@mixin css($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+@mixin center {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 // Gradient
-$gradient: linear-gradient(90deg, hsl(6, 100%, 80%) , hsl(335, 100%, 65%))
+$gradient: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 
 // Neutral Colors
-$pale-blue: hsl(243, 100%, 93%);
-$grayish-blue: hsl(229, 7%, 55%);
-$dark-blue: hsl(228, 56%, 26%);
-$very-darl-blue: hsl(229, 57%, 11%);
+$blue: (
+  "pale": hsl(243, 100%, 93%),
+  "grayish": hsl(229, 7%, 55%),
+  "dark": hsl(228, 56%, 26%),
+  "very-dark": hsl(229, 57%, 11%),
+);
+
+@function blue($tone: "pale") {
+  @return map-get($blue, $tone);
+}
 
 // Font
-$font-size: 14px
+$font-size: 14px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  border: 3px solid red;
+
+  background-color: blue("very-dark");
+  background-image: url("images/bg-desktop.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-areas: "header main" "footer footer";
+  //   align-items: center;
+  //   grid-template-columns: 1fr 1fr;
+
+  font-size: $font-size;
+  font-family: Raleway;
+
+  // Header
+  header {
+    grid-area: header;
+    align-self: center;
+    @include css(border-radius, 5px);
+    @include css(border-top-right-radius, 80px);
+    @include center;
+    background-color: blue("dark");
+    width: 350px;
+    height: 200px;
+    padding: 40px;
+
+    // Icons
+    $icons: "document", "folder", "upload";
+
+    .icons-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      grid-gap: 15px;
+      align-items: center;
+      border: 1px solid yellow;
+
+      margin-top: 15px;
+    }
+
+    .icon-container {
+      @include css(border-radius, 5px);
+
+      background-color: blue("very-dark");
+      width: 50px;
+      height: 50px;
+
+      border: 1px solid purple;
+    }
+
+    .icon {
+      @include center;
+      width: 25px;
+      height: 25px;
+
+      border: 1px solid red;
+    }
+  }
+
+  // Main Content
+  $percentage: 85%;
+
+  main {
+    grid-area: main;
+    @include center();
+    // background-color: blue("dark");
+
+    // Storage Graphic
+    .storage-container {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-evenly;
+      width: 540px;
+      height: 150px;
+      padding: 35px;
+      color: white;
+
+      background-color: blue("dark");
+
+      @include css(border-radius, 7.5px);
+    }
+
+    .storage-popup {
+      display: none;
+    }
+
+    .storage-graphic {
+      padding-top: 20px;
+      width: 100%;
+      height: auto;
+
+      #graph-background {
+        @include css(border-radius, 7.5px);
+        background: blue("very-dark");
+        height: 15px;
+
+        #graph-fill {
+          @include css(border-radius, 7.5px);
+
+          width: $percentage;
+          height: 100%;
+          background: $gradient;
+          overflow: hidden;
+          border: 2px solid blue("very-dark");
+
+          #graph-endpoint {
+            @include center();
+            @include css(border-radius, 50%);
+
+            margin: unset;
+            margin-right: 2px;
+            float: right;
+            height: 80%;
+            width: 10px;
+            background-color: white;
+          }
+        }
+      }
+
+      .graphic-text {
+        height: auto;
+        width: 100%;
+        padding-top: 10px;
+        content: "";
+        .left {
+          float: left;
+        }
+
+        .right {
+          float: right;
+        }
+      }
+    }
+  }
+
+  // Footer and Attributation
+  footer {
+    grid-area: footer;
+    @include center();
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
