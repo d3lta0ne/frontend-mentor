@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="Ping Logo" />
+      <div class="header-text">
+        <h1>We are launching soon!</h1>
+        <h2>Subscribe and get notified</h2>
+      </div>
+    </header>
+    <main>
+      <div class="subscription-container">
+        <input
+          type="email"
+          name="subscription-email"
+          id="email"
+          placeholder="Your email address..."
+        />
+        <button>Notify Me</button>
+      </div>
 
-  We are launching soon!
+      <div class="graphic-container"></div>
+    </main>
 
-  Subscribe and get notified
+    <footer>
+      <div class="social-media">
+        <span class="icon" id="icon-facebook"></span>
+        <span class="icon" id="icon-twitter"></span>
+        <span class="icon" id="icon-instagram"></span>
+      </div>
+      <div class="copyright">
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </div>
 
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">David Bruno</a>.
+      </p>
+    </footer>
+  </body>
 </html>
