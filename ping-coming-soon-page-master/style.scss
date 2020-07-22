@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+$colors: (
+  blue: (
+    base: hsl(223, 87%, 63%),
+    pale: hsl(223, 100%, 88%),
+    very-dark: hsl(209, 33%, 12%),
+  ),
+  red: (
+    light: hsl(354, 100%, 66%),
+  ),
+  grey: (
+    base: hsl(0, 0%, 59%),
+  ),
+);
+
+@function color($color, $tone: "base") {
+  @return map-get(map-get($colors, $color), $tone);
+}
+$font-size: 20px;
+
+@mixin v-center {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  //   height: 100vh;
+  //   width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Libre Franklin;
+  font-size: $font-size;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    color: color(grey);
+    font-weight: 300;
+
+    .header-text {
+      display: inherit;
+      flex-direction: inherit;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      margin-top: 50px;
+      width: 525px;
+
+      h1 {
+        font-weight: 300;
+      }
+      h2 {
+        padding: 10px;
+        // width: ;
+        color: color(blue, "very-dark");
+        font-weight: 300;
+      }
+      strong {
+        color: color(blue, "very-dark");
+        font-weight: 700;
+      }
+    }
+  }
+
+  main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .subscription-container {
+      width: 100%;
+      height: 60px;
+      border-radius: 30px;
+      input {
+        width: 420px;
+        height: 100%;
+        padding: 10px;
+        border-radius: 30px;
+        border: thin solid color(blue, "pale");
+      }
+
+      input::placeholder {
+        color: color(blue, "pale");
+      }
+      button {
+        width: 230px;
+        height: 100%;
+        color: inherit;
+        background-color: color(blue, "base");
+        border-radius: inherit;
+        border: none;
+        font-weight: 700;
+        box-shadow: -10px -10px 30px 4px rgba(0, 0, 0, 0.1),
+          10px 10px 30px 4px rgba(45, 78, 255, 0.15);
+      }
+    }
+
+    img {
+      width: 650px;
+      height: 400px;
+      margin-top: 80px;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: color(grey);
+
+    margin-top: 70px;
+
+    .social-media {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-items: center;
+
+      .icon-container {
+        width: 40px;
+        height: 40px;
+        margin: 15px;
+        border: thin solid color(blue, pale);
+        border-radius: 50%;
+      }
+      .icon {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        @include v-center();
+
+        color: color(blue, base);
+      }
+    }
+  }
+}

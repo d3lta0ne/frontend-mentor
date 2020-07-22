@@ -1,3 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
+body {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: Libre Franklin;
+  font-size: 20px;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: #969696;
+  font-weight: 300;
+}
+body header .header-text {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 50px;
+  width: 525px;
+}
+body header .header-text h1 {
+  font-weight: 300;
+}
+body header .header-text h2 {
+  padding: 10px;
+  color: #151f29;
+  font-weight: 300;
+}
+body header .header-text strong {
+  color: #151f29;
+  font-weight: 700;
+}
+body main {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+body main .subscription-container {
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+}
+body main .subscription-container input {
+  width: 420px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  border: thin solid #c2d3ff;
+}
+body main .subscription-container input::placeholder {
+  color: #c2d3ff;
+}
+body main .subscription-container button {
+  width: 230px;
+  height: 100%;
+  color: inherit;
+  background-color: #4f7df3;
+  border-radius: inherit;
+  border: none;
+  font-weight: 700;
+  box-shadow: -10px -10px 30px 4px rgba(0, 0, 0, 0.1), 10px 10px 30px 4px rgba(45, 78, 255, 0.15);
+}
+body main img {
+  width: 650px;
+  height: 400px;
+  margin-top: 80px;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: #969696;
+  margin-top: 70px;
+}
+body footer .social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+body footer .social-media .icon-container {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  border: thin solid #c2d3ff;
+  border-radius: 50%;
+}
+body footer .social-media .icon {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #4f7df3;
+}
 
 /*# sourceMappingURL=style.css.map */
