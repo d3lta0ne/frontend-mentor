@@ -21,7 +21,7 @@
       Frontend Mentor | Huddle landing page with alternating feature blocks
     </title>
   </head>
-  <body class="w-full h-full font-osans">
+  <body class="w-screen h-full font-osans">
     <header
       class="bg-contain bg-cyan-pale w-full h-auto px-16 py-12 grid grid-cols-2"
       style="background-image: url('images/bg-hero-desktop.svg');"
@@ -54,60 +54,71 @@
       />
     </header>
 
-    <div class="main bg-red-100">
-      <div class="card flex">
-        <div class="card__text">
-          <h3>Grow Together</h3>
-          <p>
+    <section class="w-full h-auto pt-20 rounded-sm">
+      <div class="shadow-xl bg-white mx-24 mt-28 grid grid-cols-2">
+        <div class="pl-28 pt-40">
+          <h3 class="font-pop font-semibold text-cyan-dark">Grow Together</h3>
+          <p class="text-blue-gray">
             Generate meaningful discussions with your audience and build a
             strong, loyal community. Think of the insightful conversations you
             miss out on with a feedback form.
           </p>
         </div>
         <img
+          class="pt-12 pr-8"
           src="images/illustration-grow-together.svg"
           alt="Grow Together Illustration"
         />
       </div>
 
-      <!-- <div class="card flex">
-        <div class="card__text">
-          <h3>Flowing Conversations</h3>
-          <p>
+      <div class="shadow-xl bg-white mx-24 mt-10 grid grid-cols-2">
+        <div class="pl-28 pt-40">
+          <h3 class="font-pop font-semibold text-cyan-dark">
+            Flowing Conversations
+          </h3>
+          <p class="text-blue-gray">
             You wouldn't paginate a conversation in real life, so why do it
             online? Our threads have just-in-time loading for a more natural
             flow.
           </p>
         </div>
         <img
+          class="pt-12 pr-8"
           src="images/illustration-flowing-conversation.svg"
           alt="Flowing Conversations Illustrations"
         />
       </div>
 
-      <div class="card flex">
-        <div class="card__text">
-          <h3>Your Users</h3>
-          <p>
+      <div class="shadow-xl bg-white mx-24 mt-10 grid grid-cols-2 mb-64">
+        <div class="pl-28 pt-40">
+          <h3 class="font-pop font-semibold text-cyan-dark">
+            Your Users
+          </h3>
+          <p class="text-blue-gray">
             It takes no time at all to integrate Huddle with your app's
             authentication solution. This means, once signed in to your app,
             your users can start chatting immediately.
           </p>
         </div>
         <img
+          class="pt-12 pr-8"
           src="images/illustration-your-users.svg"
           alt="Your Users Illustrations"
         />
-      </div> -->
-    </div>
+      </div>
+    </section>
 
-    <div id="join">
-      <h1>Ready To Build Your Community?</h1>
-      <button>Get Started For Free</button>
-    </div>
+    <section
+      class="shadow-xl absolute bg-white rounded px-32 pt-20 pb-16 transform translate-x-1/2 -translate-y-1/2"
+    >
+      <h1 class="">Ready To Build Your Community?</h1>
+      <button class="mt-16 bg-pink rounded-full px-20 py-5 text-white">
+        Get Started For Free
+      </button>
+    </section>
 
-    <footer>
-      <div class="footer__banner">
+    <footer class="bg-cyan-dark">
+      <div class="">
         <img src="images/logo.svg" alt="" />
       </div>
       <div class="icons">
