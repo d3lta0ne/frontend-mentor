@@ -10,34 +10,51 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link
+    <!-- <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
-    />
+    /> -->
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="output.css" />
 
     <title>
       Frontend Mentor | Huddle landing page with alternating feature blocks
     </title>
   </head>
-  <body>
-    <header class="container bg-pink">
-      <div class="header__banner container inline-flex justify-between">
+  <body class="w-full h-full font-osans">
+    <header
+      class="bg-contain bg-cyan-pale w-full h-auto px-16 py-12 grid grid-cols-2"
+      style="background-image: url('images/bg-hero-desktop.svg');"
+    >
+      <div class="container inline-flex justify-between h-10 mb-20 col-span-2">
         <img src="images/logo.svg" alt="Huddle Logo" />
-        <button class="">Try It Free</button>
+        <button
+          class="shadow-md bg-white hover:bg-gray-100 text-cyan-dark font-bold py-3 px-16 rounded-full h-12 w-auto"
+        >
+          Try It Free
+        </button>
       </div>
-      <h1>Build The Community Your Fans Will Love</h1>
-      <h2>
-        Huddle re-imagines the way we build communities. You have a voice, but
-        so does your audience. Create connections with your users as you engage
-        in genuine discussion.
-      </h2>
-      <button>Get Started For Free</button>
-      <img src="images/illustration-mockups.svg" alt="Huddle Example" />
+      <div class="col-span-1">
+        <h1 class="mt-20 mb-12 font-pop font-semibold text-4xl pr-48">
+          Build The Community Your Fans Will Love
+        </h1>
+        <h2 class="mb-8 pr-20 text-lg">
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </h2>
+        <button class="bg-pink rounded-full px-20 py-5 text-white">
+          Get Started For Free
+        </button>
+      </div>
+      <img
+        class="col-span-1"
+        src="images/illustration-mockups.svg"
+        alt="Huddle Example"
+      />
     </header>
 
-    <div class="main">
+    <div class="main bg-red-100">
       <div class="card flex">
         <div class="card__text">
           <h3>Grow Together</h3>

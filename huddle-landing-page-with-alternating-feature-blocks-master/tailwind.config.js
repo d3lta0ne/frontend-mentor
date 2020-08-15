@@ -86,6 +86,8 @@ module.exports = {
         800: "#285e61",
         900: "#234e52",
       },
+      indigo: "#5c6ac4",
+
       blue: {
         100: "#ebf8ff",
         200: "#bee3f8",
@@ -123,7 +125,7 @@ module.exports = {
       pink: "hsl(322, 100%, 66%)",
 
       cyan: {
-        100: "hsl(193, 100%, 96%)",
+        pale: "hsl(193, 100%, 96%)",
         dark: "hsl(192, 100%, 9%)",
       },
     },
@@ -142,7 +144,9 @@ module.exports = {
       "16": "4rem",
       "20": "5rem",
       "24": "6rem",
+      "28": "7rem",
       "32": "8rem",
+      "36": "9rem",
       "40": "10rem",
       "48": "12rem",
       "56": "14rem",
@@ -258,6 +262,7 @@ module.exports = {
         "monospace",
       ],
       osans: ["Open Sans", "sans-serif"],
+      pop: ["Poppins", "sans-serif"],
     },
     fontSize: {
       xs: "0.75rem",
